@@ -1,11 +1,14 @@
-var path = require('path');
 const express = require('express');
-const mockAPIResponse = require('./mockAPI.js');
-var aylien = require('aylien_textapi');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const aylienAPIResponse = require('./aylienAPI.js');
 
 const app = express();
 
 app.use(express.static('dist'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(cors());
 
 console.log(__dirname);
 
@@ -19,13 +22,5 @@ app.listen(8080, function () {
 });
 
 app.get('/test', function (req, res) {
-    res.send(mockAPIResponse)
-});
-
-const dotenv = require('dotenv');
-dotenv.config();
-
-var aylienApi = new aylien({
-    application_id: process.env.API_ID,
-    application_key: process.env.API_KEY
+    res.send(aylienAPIResponse)
 });
