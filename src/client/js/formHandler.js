@@ -3,7 +3,6 @@ function handleSubmit(event) {
 
     // check what text was put into the form field
     let formText = document.getElementById('name').value;
-    Client.checkForName(formText);
 
     const postDataToAnalyze = async (url = '', data = {}) => {
         const response = await fetch(url, {
@@ -21,16 +20,20 @@ function handleSubmit(event) {
             console.log(error);
         }
     }
-console.log('FORMtext ' + formText);
-    postDataToAnalyze("http://localhost:8080/sentimentAnalysis", { url: formText })
-    .then(function(res) {
-        console.log('respoooonse: ' + JSON.stringify(res));
-        JSON.stringify(res);
-        document.getElementById('polarity').innerHTML = res.polarity;
-        document.getElementById('subjectivity').innerHTML = res.subjectivity;
-        document.getElementById('polarity-confidence').innerHTML = res.polarity_confidence;
-        document.getElementById('subjectivity-confidence').innerHTML = res.subjectivity_confidence;
-    })
+    console.log('FORMtext ' + formText);
+    if(Client.checkUrl(formText)) {
+        postDataToAnalyze("http://localhost:8080/sentimentAnalysis", { url: formText })
+        .then(function(res) {
+            console.log('respoooonse: ' + JSON.stringify(res));
+            JSON.stringify(res);
+            document.getElementById('polarity').innerHTML = res.polarity;
+            document.getElementById('subjectivity').innerHTML = res.subjectivity;
+            document.getElementById('polarity-confidence').innerHTML = res.polarity_confidence;
+            document.getElementById('subjectivity-confidence').innerHTML = res.subjectivity_confidence;
+        });
+    } else {
+        alert('The url is not correct');
+    }
 }
 
 export { handleSubmit }
