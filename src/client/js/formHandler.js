@@ -5,7 +5,6 @@ function handleSubmit(event) {
     let formText = document.getElementById('name').value;
     Client.checkForName(formText);
 
-    console.log("::: Form Submitted :::")
     const postDataToAnalyze = async (url = '', data = {}) => {
         const response = await fetch(url, {
             method: "POST",
@@ -23,15 +22,12 @@ function handleSubmit(event) {
         }
     }
 
-    postDataToAnalyze("http://localhost:8080/data", { text: formText });
-    // .then(res => {
-    //     console.log("response!!");
-    //     console.log(res);
-    //     return res.json();
-    // })
-    // .then(function(res) {
-    //     document.getElementById('results').innerHTML = res.message
-    // })
+    postDataToAnalyze("http://localhost:8080/sentimentAnalysis", { text: formText })
+    .then(function(res) {
+        console.log('respoooonse: ' + JSON.stringify(res));
+        JSON.stringify(res);
+        document.getElementById('results').innerHTML = res.polarity;
+    })
 }
 
 export { handleSubmit }
