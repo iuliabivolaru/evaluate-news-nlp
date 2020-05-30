@@ -27,6 +27,9 @@ console.log('FORMtext ' + formText);
         console.log('respoooonse: ' + JSON.stringify(res));
         JSON.stringify(res);
         document.getElementById('polarity').innerHTML = res.polarity;
+        document.getElementById('subjectivity').innerHTML = res.subjectivity;
+        document.getElementById('polarity-confidence').innerHTML = res.polarity_confidence;
+        document.getElementById('subjectivity-confidence').innerHTML = res.subjectivity_confidence;
     })
 }
 
