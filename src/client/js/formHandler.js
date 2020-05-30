@@ -21,12 +21,12 @@ function handleSubmit(event) {
             console.log(error);
         }
     }
-
-    postDataToAnalyze("http://localhost:8080/sentimentAnalysis", { text: formText })
+console.log('FORMtext ' + formText);
+    postDataToAnalyze("http://localhost:8080/sentimentAnalysis", { url: formText })
     .then(function(res) {
         console.log('respoooonse: ' + JSON.stringify(res));
         JSON.stringify(res);
-        document.getElementById('results').innerHTML = res.polarity;
+        document.getElementById('polarity').innerHTML = res.polarity;
     })
 }
 
