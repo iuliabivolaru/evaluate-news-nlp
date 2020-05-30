@@ -7,6 +7,7 @@ var aylienApi = new aylien({
     application_key: process.env.API_KEY
 });
 
+
 aylienApi.sentiment({
     'text': 'John is a very good football player!'
   }, function(error, response) {
