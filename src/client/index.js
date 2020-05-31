@@ -1,4 +1,4 @@
-import { checkUrl } from './js/nameChecker';
+import { checkUrl } from './js/urlChecker';
 import { handleSubmit } from './js/formHandler';
 import './styles/resets.scss';
 import './styles/base.scss';
