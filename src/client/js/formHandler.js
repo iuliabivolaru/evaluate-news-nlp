@@ -1,18 +1,14 @@
 function handleSubmit(event) {
     event.preventDefault();
 
-    // check what text was put into the form field
     let formText;
-    console.log(document);
     if(document.getElementById('name')) {
         formText = document.getElementById('name').value;
     }
 
-    console.log('FORMtext ' + formText);
     if(Client.checkUrl(formText)) {
         postDataToAnalyze("http://localhost:8080/sentimentAnalysis", { url: formText })
         .then(function(res) {
-            console.log('respoooonse: ' + JSON.stringify(res));
             JSON.stringify(res);
             document.getElementById('polarity').innerHTML = res.polarity;
             document.getElementById('subjectivity').innerHTML = res.subjectivity;
@@ -34,7 +30,6 @@ const postDataToAnalyze = async (url = '', data = {}) => {
         body: JSON.stringify(data)
     });
     try {
-        console.log(response);
         return await response.json();
     } catch(error) {
         console.log(error);

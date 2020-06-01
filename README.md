@@ -18,7 +18,7 @@ $ npm run start
 
 ## Usage
 
-Go to `http://localhost:8080/`, insert the URL you want to analyze, click the submit button and the attributes will appear below.
+Go to `http://localhost:8081/`, insert the URL you want to analyze, click the submit button and the attributes will appear below.
 
 
 

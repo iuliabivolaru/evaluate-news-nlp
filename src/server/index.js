@@ -29,15 +29,11 @@ app.listen(8080, function () {
 });
 
 app.post('/sentimentAnalysis', function postHandler(request, response) {
-    // let body = request.body;
-    console.log('booody2' + request.body.url);
     aylienApi.sentiment({ 
         url: request.body.url,
         mode: "document"
       }, function(error, postReponse) {
         if (error === null) {
-            console.log("response!!");
-            console.log(postReponse);
             response.send(postReponse);
         }
     });
