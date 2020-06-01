@@ -6,12 +6,14 @@ This project is using the Aylien API to determine various attributes of an artic
 
 Clone the GitHub repository and use npm to install the dependencies.
 
-- `$ git clone https://github.com/iuliabivolaru/evaluate-news-nlp.git`
-- `$ npm install`
+```
+$ git clone https://github.com/iuliabivolaru/evaluate-news-nlp.git
+$ npm install
 <!-- to run the build environment: -->
-- `$ npm run build-dev`
+$ npm run build-dev
 <!-- to run the prod environment: -->
-- `$ npm run build-prod`
+$ npm run build-prod
+```
 
 ## Usage
 
