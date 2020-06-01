@@ -11,10 +11,10 @@ $ git clone https://github.com/iuliabivolaru/evaluate-news-nlp.git
 $ npm install
 $ npm run start
 ```
-To run the build environment:
-```npm run build-dev```
-To run the prod environment:
-```npm run build-prod```
+- to run the build environment:
+`npm run build-dev`
+- to run the prod environment:
+`npm run build-prod`
 
 ## Usage
 
