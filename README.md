@@ -1,6 +1,6 @@
 # Text evaluation with Aylien
 
-This project is using the Aylien API to determine various attributes of an article or blog post, such as its polarity, subjectivity and their confidence indices.
+This project is using the Aylien API to determine various attributes of an article or blog post, such as its polarity, subjectivity and the confidence indices.
 
 ## Installation
 
