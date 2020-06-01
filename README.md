@@ -12,9 +12,9 @@ $ npm install
 $ npm run start
 ```
 To run the build environment:
-`npm run build-dev`
+```npm run build-dev```
 To run the prod environment:
-`npm run build-prod`
+```npm run build-prod```
 
 ## Usage
 
