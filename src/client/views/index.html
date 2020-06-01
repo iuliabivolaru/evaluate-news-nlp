@@ -8,9 +8,10 @@
     <body>
 
         <header>
-            <div class="">
-                Logo
-            </div>
+            <img class="logo-image" src="../img/aylienn.png"/>
+            <h1 class="">
+                Sentiment analysis with Aylien
+            </h1>
             <div class="">
                 navigation
             </div>
@@ -19,21 +20,31 @@
         <main>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" placeholder="Name">
+                    <input id="name" type="text" name="input" value="" placeholder="Insert your URL">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             <section>
 
             <section>
-                <strong>Sentiment analysis results:</strong>
-                <h2>Polarity</h2> 
-                <div id="polarity"></div>
-                <h2>Subjectivity</h2> 
-                <div id="subjectivity"></div>
-                <h2>Polarity confidence</h2> 
-                <div id="polarity-confidence"></div>
-                <h2>Subjectivity confidence</h2> 
-                <div id="subjectivity-confidence"></div>
+                <h2>Sentiment analysis results:</h2>
+                <div class="results">
+                    <div>
+                        <h3>Polarity</h3> 
+                        <div id="polarity"></div>
+                    </div>
+                    <div>
+                        <h3>Subjectivity</h3> 
+                        <div id="subjectivity"></div>
+                    </div>
+                    <div>
+                        <h3>Polarity confidence</h3> 
+                        <div id="polarity-confidence"></div>
+                    </div>
+                    <div>
+                        <h3>Subjectivity confidence</h3> 
+                        <div id="subjectivity-confidence"></div>
+                    </div>
+                </div>
             </section>
         </main>
 
@@ -43,16 +54,16 @@
 
     </body>
     <script>
-        if('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js');
-            })
-        }
+        // if('serviceWorker' in navigator) {
+        //     window.addEventListener('load', () => {
+        //         navigator.serviceWorker.register('/service-worker.js');
+        //     })
+        // }
     </script>
     <div>
         TODO:  
         4. do some styling and some refactoring
-        5. do readme
+        5. fix service workers
     </div>
 </html>
 
