@@ -9,9 +9,9 @@ Clone the GitHub repository and use npm to install the dependencies.
 ```
 $ git clone https://github.com/iuliabivolaru/evaluate-news-nlp.git
 $ npm install
-**to run the build environment:**
+- to run the build environment:
 $ npm run build-dev
-**to run the prod environment:**
+- to run the prod environment:
 $ npm run build-prod
 ```
 
