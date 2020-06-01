@@ -4,16 +4,17 @@ This project is using the Aylien API to determine various attributes of an artic
 
 ## Installation
 
-Clone the GitHub repository and use npm to install the dependencies.
+Clone the GitHub repository and use npm to install the dependencies. Then start the server.
 
 ```
 $ git clone https://github.com/iuliabivolaru/evaluate-news-nlp.git
 $ npm install
+$ npm run start
 ```
-- to run the build environment:
-`$ npm run build-dev`
-- to run the prod environment:
-`$ npm run build-prod`
+To run the build environment:
+`npm run build-dev`
+To run the prod environment:
+`npm run build-prod`
 
 ## Usage
 
